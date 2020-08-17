@@ -179,9 +179,27 @@ p {
     font-weight: 100;
 }
 
+#add-btn {
+    color: white;
+    text-align: center;
+    text-justify: center;
+    height: 80px;
+    padding: 20px 40px;
+    font-size: 36px;
+    margin: 0px 40px;;
+    background: hsl(var(--hue-nav), 80%, 50%);
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+#add-btn:hover {
+    color: yellow;
+    background: hsl(var(--hue-nav), 50%, 10%);
+}
+
 #ans-btns {
     font-size: 48px;
-
+    animation: fadein calc(var(--animation-order) * 150ms + 150ms) ease-in;
 }
 
 #question {
@@ -195,6 +213,47 @@ p {
     font-size: 64px;
     color: #666;
 }
+
+#noQuest {
+    justify-content: center;
+}
+
+#QNo {
+    height: 120px;
+    width: 120px;
+    font-size: 48px;
+    padding: auto;
+    margin-left: 40px;
+    border: 2px solid #999;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#frameOne, #frameTwo, #frameThree, #frameFour, #noQuest {
+    animation: fadein calc(var(--animation-order) * 150ms) ease-in;
+}
+
+#frameFour {
+    font-size: smaller;
+}
+
+@keyframes fadein {
+    0% {
+      color: white;
+      opacity: 0;
+      filter: blur(15px);
+      transform: scale(0.6) translateY(-8px);
+    }
+    80% {
+      opacity: .6;
+      filter: blur(5px);
+    }
+    100% {
+      opacity: 1;
+      filter: none;
+      transform: none;
+    }
+  }
 
 @media screen and (max-width: 640px) {
 
