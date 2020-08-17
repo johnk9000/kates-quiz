@@ -40,14 +40,11 @@ NoQuestBtn.addEventListener("click", function(event){
         if( entry == "-") {
             j++;
         }
-        questions[i] = (j + 1);
         answers[i] = answers[j];
         fauxAns[i] = answers[Math.floor(Math.random() * answers.length)];
         j++;
         console.log(questions);
         console.log(answers);
-        
-        
     }
     
 }
