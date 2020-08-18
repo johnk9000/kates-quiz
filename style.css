@@ -80,14 +80,17 @@ p {
     color: black;
     box-shadow: 0 0 15px 2px hsl(var(--hue-right), 100%, 75%);
     transform: scale(1.25);
+    border: 2px solid greenyellow;
+    border-radius: 75%;
     z-index: 1;
 }
 
 .btn.wrong {
     --hue: var(--hue-wrong);
     color: #999;
-    box-shadow: 0 0 15px 2px hsl(var(--hue-wrong), 100%, 75%);
-
+    box-shadow: 0 0 15px 2px hsl(var(--hue-wrong), 50%, 75%);
+    border: 2px solid white;
+    border-radius: 75%;
 }
 
 .start-btn, .next-btn {
@@ -133,6 +136,25 @@ p {
     justify-content: center;
     align-items: center;
     min-height: 80px;
+}
+
+.display {
+    min-height: 80px;
+}
+
+h2 {
+    padding: auto;
+    margin: auto;
+    text-align: center;
+}
+
+h2 > img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 40px 0px 0px 40px;
+    transition: 420ms ease-in;
 }
 
 .row {
@@ -259,11 +281,13 @@ p {
 
 
     .container {
-        max-width: 96%;
+        max-width: 100%;
+        padding: 20px 40px;
+        margin: 0;
     }
     
     .btn {
-        min-width: auto;
+        width: 100%;
     }
 
     .btn-OffRd {
@@ -276,9 +300,10 @@ p {
 
     #question {
         text-align: justify;
-        margin-bottom: 60px;
+        margin-bottom: 20px;
+        padding: auto;
         font-size: 36px;
-        color: hsl(var(--hue), 50%, 15%)
+        color: hsl(var(--hue), 50%, 15%)j
     }
 
     #static-question {
@@ -286,6 +311,17 @@ p {
         color: #666;
     }
 
-    
+    #QNo {
+        margin: auto;
+        position: relative;
+        left: 15%;
+        min-width: 150px;
+    }
+
+    #add-btn {
+        font-size: 24px;
+        height: auto;
+        width: auto;
+    }
 
 }
