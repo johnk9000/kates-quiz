@@ -15,12 +15,10 @@ var clock = document.querySelector(".timer");
 var ansChoice = [];
 const ansStr = "Cell cycle non-specific Alkylating agents \n\n Cell cycle Specific Antimetabolites \n\nImmunotherapy and Targeted Therapy\n\n*HER-2 (Human Epidermal Growth Factor Receptor-2) and Herceptin Avastins\n\nHormone Therapy: Corticosteroids\n\n Hematopoietic Growth Factors \n\n GCFS (Neupogen) \n\n Erythropoietin(Epogen)\n\nLow Platelet Levels\n\n Palifermim/kepivance"
 const answers = ansStr.split("\n\n")
-const fauxAns = [];
+const fauxAns = ["chemotheraputic entorpoic agents", "radiation wavelengths (λ) in Angstrom scale", "Magnetic Resonance Image Analysis", "Harmonized water"];
 const questStr = "What is useful in destroying cells that are in the resting or non-cycling state (Go phase) since it kills all cells in any cell phase (normal as well as malignent)\n\n Which of the following only kills cells that are in a specific phase of the cell cycle. These drugs do NOT work in the Go phase (resting phase) of the x 9cell cycle.\]=-c Vinca alkaloids work in M phase to inhibit mitosis \n\nWhat are used for the administration of one agent stimulates the endogenous release of other biologic agents in the patient’s body which sometimes leads to flu-like symptoms fatigue, mailaise, nasuea/vomiting\n\nTargeted Therapy-Targets and binds with specific cell receptors and pathways important to tumor growth is/are...\n\n Chemical messengers in the body which are used in combination with other drug regimens and can block the effect of other hormones and stop the growth of cancer cells dependent upon those hormones is known as what? \n\n What are used as support for cancer patients throughout their treatment phase to counteract effects of their cancer therapy? \n\n What treats neutropenia resulting from cancer therapy? \n\n What is used to treat the anemia that occurs either with the cancer or from the cancer treatment. \n\n What is the key indicator that would lead to the following decision tree: if <50,000/uL institute bleeding precautions; if <10,000/uL may need to hold chemotherapy?\n\n What are synthetic version of keratinocyte growth factor, stimulates cells on surface layer of mouth and intestinal tract to grow that Prevents and shortens the duration of mucositis?" 
 const questions = questStr.split("\n\n")
 
-var NumberofQuests = document.querySelector('#QNo');
-var NoQuestBtn = document.querySelector('#add-btn');
 
 function shuffle(vect) {
     for(let i = vect.length - 1; i > 0; i--){
@@ -62,7 +60,7 @@ function startFcn() {
 
 function nxtQuest() {
     heading.classList.add("hide");
-    if(page > questions.length - 1){
+    if(page > questions.length + 10){
         gameOver();
     } else {
         resetState();
