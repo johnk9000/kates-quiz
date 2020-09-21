@@ -71,7 +71,6 @@ p {
     color: black;
     font-weight: 600;
     transform: scale(1.25);
-    transition: 420ms;
     box-shadow: 0 0 5px 2px #999;
     z-index: 1;
 }
@@ -81,19 +80,14 @@ p {
     color: black;
     box-shadow: 0 0 15px 2px hsl(var(--hue-right), 100%, 75%);
     transform: scale(1.25);
-    border: 2px solid greenyellow;
-    border-radius: 75%;
-    animation: enter 420ms;
     z-index: 1;
 }
 
 .btn.wrong {
     --hue: var(--hue-wrong);
     color: #999;
-    box-shadow: 0 0 15px 2px hsl(var(--hue-wrong), 50%, 75%);
-    border: 2px solid white;
-    border-radius: 75%;
-    animation: enter 420ms;
+    box-shadow: 0 0 15px 2px hsl(var(--hue-wrong), 100%, 75%);
+
 }
 
 .start-btn, .next-btn {
@@ -114,7 +108,6 @@ p {
 
 .blur {
     filter: blur(5px);
-    transition: 420ms ease-in-out;
 }
 
 .game-over {
@@ -126,7 +119,6 @@ p {
     transform: scale(1.0);
     box-shadow: 0 0 2px 2px hsl(var(--hue), 0%, 90%);
     background-color: hsl(var(--hue), 10%, 75%);
-    transition: 420ms ease-in-out;
 }
 
 .next-btn:hover {
@@ -134,7 +126,6 @@ p {
     transform: scale(1.0);
     background-color: hsl(var(--hue), 10%, 75%);
     box-shadow: none;
-    transition: 420ms ease-in-out;
 }
 
 .controls {
@@ -142,26 +133,6 @@ p {
     justify-content: center;
     align-items: center;
     min-height: 80px;
-}
-
-.display {
-    min-height: 80px;
-    animation: fadein 420ms;
-}
-
-h2 {
-    padding: auto;
-    margin: auto;
-    text-align: center;
-}
-
-h2 > img {
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 40px 0px 0px 40px;
-    transition: 420ms ease-in;
 }
 
 .row {
@@ -208,109 +179,33 @@ h2 > img {
     font-weight: 100;
 }
 
-#add-btn {
-    color: white;
-    text-align: center;
-    text-justify: center;
-    height: 80px;
-    padding: 20px 40px;
-    font-size: 36px;
-    margin: 0px 40px;;
-    background: hsl(var(--hue-nav), 80%, 50%);
-    border: 2px solid white;
-    border-radius: 20px;
-}
-
-#add-btn:hover {
-    color: yellow;
-    background: hsl(var(--hue-nav), 50%, 10%);
-}
-
 #ans-btns {
-    font-size: 48px;
-    animation: enter calc(var(--animation-order) * 150ms + 150ms) ease-in;
-}
+    font-size: 24px;
 
+}
 
 #question {
     text-align: justify;
     margin-bottom: 60px;
-    font-size: 64px;
+    font-size: 32px;
     color: hsl(var(--hue), 50%, 15%)
 }
 
 #static-question {
-    font-size: 64px;
+    font-size: 32px;
     color: #666;
-}
-
-#noQuest {
-    justify-content: center;
-}
-
-#QNo {
-    height: 120px;
-    width: 120px;
-    font-size: 48px;
-    padding: auto;
-    margin-left: 40px;
-    border: 2px solid #999;
-    border-radius: 10px;
-    text-align: center;
-}
-
-#frameOne, #frameTwo, #frameThree, #frameFour, #noQuest {
-    animation: enter calc(var(--animation-order) * 150ms) ease-in;
-}
-
-#frameFour {
-    font-size: smaller;
-}
-
-@keyframes fadein {
-    0% {
-      color: white;
-      opacity: 0;
-      filter: blur(15px);
-      transform: scale(0.6) translateY(-8px);
-    }
-    80% {
-      opacity: .6;
-      filter: blur(5px);
-    }
-    100% {
-      opacity: 1;
-      filter: none;
-      transform: none;
-    }
-  }
-
-@keyframes enter {
-    0% {
-       opacity: 0;
-        filter: blur(15px);
-      }
-      80% {
-        opacity: .6;
-        filter: blur(5px);
-      }
-      100% {
-        opacity: 1;
-        filter: none;
-      }
 }
 
 @media screen and (max-width: 640px) {
 
 
     .container {
-        max-width: 100%;
-        padding: 20px 40px;
-        margin: 0;
+        max-width: 96%;
+        padding: 10px;
     }
     
     .btn {
-        width: 100%;
+        min-width: auto;
     }
 
     .btn-OffRd {
@@ -323,28 +218,16 @@ h2 > img {
 
     #question {
         text-align: justify;
-        margin-bottom: 20px;
-        padding: auto;
-        font-size: 36px;
-        color: hsl(var(--hue), 50%, 15%)j
+        margin-bottom: 10px;
+        font-size: 32px;
+        color: hsl(var(--hue), 50%, 15%)
     }
 
     #static-question {
-        font-size: 36px;
+        font-size: 16px;
         color: #666;
     }
 
-    #QNo {
-        margin: auto;
-        position: relative;
-        left: 15%;
-        min-width: 150px;
-    }
-
-    #add-btn {
-        font-size: 24px;
-        height: auto;
-        width: auto;
-    }
+    
 
 }
