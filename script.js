@@ -71,7 +71,7 @@ function nxtQuest() {
 
 function nxtPage() {
     page++;
-    if(page > questions.length - 1){
+    if(page > questions.length + 10){
         nxtBtn.classList.add("game-over");
         nxtBtn.textContent = "Restart"
         secsLeft = secs;
